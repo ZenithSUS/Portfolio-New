@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @keyframes fade-in {
     from {
       opacity: 0;
@@ -13,3 +12,47 @@
   .animate-fade-in {
     animation: fade-in 0.5s ease-in-out;
   }
+
+/* Hide scrollbar */
+.scrollbar-hide {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: block; /* For Chrome, Safari, and Opera */
+}
+
+/* Show scrollbar on hover */
+.scrollbar-default:hover {
+  scrollbar-width: thin; /* For Firefox */
+  -ms-overflow-style: auto; /* For Internet Explorer and Edge */
+}
+
+.scrollbar-default:hover::-webkit-scrollbar {
+  display: block; /* For Chrome, Safari, and Opera */
+  width: 12px; /* Adjust scrollbar width */
+}
+
+.scrollbar-default:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(21, 160, 253, 0.842); /* Customize scrollbar thumb */
+  border-radius: 4px;
+}
+
+.scrollbar-default:hover::-webkit-scrollbar-track {
+  background-color:  rgba(21, 160, 253, 0.842); /* Customize scrollbar track */
+}
+
+/* Blue scrollbar */
+.scrollbar-blue::-webkit-scrollbar {
+  width: 12px; /* Adjust scrollbar width */
+}
+
+.scrollbar-blue::-webkit-scrollbar-thumb {
+  background-color: #3b82f6; /* Tailwind's bg-blue-500 */
+  border-radius: 4px;
+}
+
+.scrollbar-blue::-webkit-scrollbar-track {
+  background-color: #e0f2fe; /* Light blue for contrast */
+}

@@ -8,7 +8,7 @@ export function ProjectCard({ children }: { children: React.ReactNode }) {
 
 export function ProjectWrapper({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex p-2 gap-7 w-full flex-wrap overflow-x-scroll scroll-smooth scrollbar-hide hover:scrollbar-default">
+    <div className="flex p-2 gap-7 w-full flex-wrap overflow-x-scroll scrollbar-default scrollbar-blue scroll-smooth scrollbar-hide hover:scrollbar-default">
       {children}
     </div>
   );
@@ -30,7 +30,7 @@ export function ProjectTitle({ children }: { children: React.ReactNode }) {
 
 export function ProjectBox({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex">
+    <div className="flex flex-col">
       <div className="flex gap-6 w-full">{children}</div>
     </div>
   );

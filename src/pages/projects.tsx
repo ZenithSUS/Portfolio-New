@@ -13,9 +13,19 @@ import CyberGhost from "../assets/cyberghost.png";
 import GreekMythApi from "../assets/greekmythApi.png";
 import NoteTakingApp from "../assets/noteTaking.jpg";
 import TodoApp from "../assets/todoApp.png";
+import ProdSystem from "../assets/prodSystem.jpg";
+import Monitoring from "../assets/monitoring.png";
 
 export default function Projects() {
   const projects: Project[] = [
+    {
+      title: "Compliance Monitoring System",
+      description:
+        "A secure system for monitoring and managing compliance policies. It ensures data privacy, supports tracking, and integrates third-party authentication, for a seamless experience.",
+      tech: ["React", "Tailwind", "Node.js", "Express.js", "Appwrite"],
+      image: Monitoring,
+      href: "https://github.com/ZenithSUS/monitoring-system-admin",
+    },
     {
       title: "Content Management System",
       description:
@@ -72,8 +82,8 @@ export default function Projects() {
       description:
         "A small project that manages products using REST API calls.",
       tech: ["React", "Tailwind", "PHP", "MySQL"],
-      image: GreekMyth,
-      href: "https://github.com/ZenithSUS/ProductManagmentSystem",
+      image: ProdSystem,
+      href: "https://github.com/ZenithSUS/product-management-system",
     },
     {
       title: "Todo List",
@@ -118,7 +128,7 @@ export default function Projects() {
 
   return (
     <main className="flex flex-col gap-5 animate-fade-in h-fit">
-      <div className="flex flex-wrap gap-3 max-h-screen overflow-y-scroll">
+      <div className="flex flex-wrap gap-3 max-h-screen overflow-y-scroll scrollbar-default scroll-smooth scrollbar-hide hover:scrollbar-defaulthover:scrollbar-default">
         <h1 className="text-2xl font-bold text-blue-400">Featured Projects</h1>
         <ProjectWrapper>
           <ProjectBox>
