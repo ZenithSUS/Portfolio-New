@@ -6,6 +6,7 @@ export type NavLink = {
 export type Project = {
   title: string;
   description: string;
+  tech: string[];
   image: string;
   href: string;
 };
