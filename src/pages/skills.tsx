@@ -1,10 +1,13 @@
 import { useNav } from "../context/navprovider";
+import { useEffect } from "react";
 import { frontend, backend, database, tools } from "../data/skills";
 import { SkillBox } from "../components/skill";
 
 export default function Skills() {
   const { setName } = useNav();
-  setName("Skills");
+  useEffect(() => {
+    setName("Skills");
+  }, [setName]);
 
   return (
     <main className="flex flex-col gap-5 animate-fade-in h-fit">
@@ -14,7 +17,7 @@ export default function Skills() {
         frontend, backend, database, and tools.
       </div>
 
-      <div className="grid grid-cols-2 gap-5 items-start">
+      <div className="flex flex-col md:grid md:grid-cols-2 gap-5 items-start">
         <div className="flex flex-col gap-2 bg-slate-800 p-5 rounded-2xl">
           <h2 className="font-bold text-blue-400 text-xl">Frontend</h2>
           <SkillBox skills={frontend} />

@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import { useNav } from "../context/navprovider";
 
 export default function About() {
   const { setName } = useNav();
-  setName("About");
+
+  useEffect(() => {
+    setName("About");
+  }, [setName]);
 
   return (
     <main className="flex flex-col gap-5 animate-fade-in h-fit p-4 md:p-2 md:w-full ">

@@ -1,7 +1,7 @@
 import Jeran from "../assets/jeran.jpg";
 import { Contact, Social } from "../libs/types";
 import { Contacts, Socials } from "../data/socials";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function Info({ animationDone }: { animationDone: boolean }) {
   return (
@@ -13,29 +13,47 @@ export default function Info({ animationDone }: { animationDone: boolean }) {
       }}
     >
       <header className="flex flex-col items-center p-5 gap-2">
-        <motion.div
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          whileDrag={{ scale: 0.9, rotate: 10 }}
-        >
-          <img
-            src={Jeran}
-            alt="Jeran"
-            className="w-40 h-40 rounded-full object-fit"
-          />
-        </motion.div>
+        {!animationDone ? (
+          <motion.div
+            key="before-animation" // Add unique key
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <img
+              src={Jeran}
+              alt="Jeran"
+              className="w-40 h-40 rounded-full object-fit"
+            />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="after-animation" // Add unique key
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 5, ease: "easeInOut" }} // Adjusted duration
+          >
+            <img
+              src={Jeran}
+              alt="Jeran"
+              className="w-40 h-40 rounded-full object-fit"
+            />
+          </motion.div>
+        )}
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: animationDone ? 1 : 0 }}
           transition={{ duration: 5, ease: "easeInOut" }}
         >
-          {/* Rest of the content */}
           <div className="flex flex-col gap-2.5 items-center">
             <h1 className="text-3xl font-bold text-center">
               Jeran Christopher Merino
             </h1>
-            <p className="text-sm text-blue-400">Web Developer</p>
+            <p className="text-sm text-bold text-blue-400 mb-2">
+              Web Developer
+            </p>
           </div>
           <hr className="w-full" />
 
@@ -58,16 +76,22 @@ export default function Info({ animationDone }: { animationDone: boolean }) {
 
           <div className="grid grid-cols-2 p-5 gap-2">
             {Socials.map((social: Social) => (
-              <a
+              <motion.a
                 href={social.href}
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2"
                 key={social.name}
+                whileHover={{
+                  scale: 1.1,
+                  transition: { duration: 0.3 },
+                }}
+                whileTap={{ scale: 0.95 }}
+                whileDrag={{ scale: 0.9, rotate: 10 }}
               >
                 {social.logo}
                 {social.name}
-              </a>
+              </motion.a>
             ))}
           </div>
 

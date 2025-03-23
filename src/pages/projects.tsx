@@ -1,4 +1,5 @@
 import { useNav } from "../context/navprovider";
+import { useEffect } from "react";
 import { Project } from "../libs/types";
 import {
   ProjectCard,
@@ -11,7 +12,10 @@ import { projects, smallProjects } from "../data/projects";
 
 export default function Projects() {
   const { setName } = useNav();
-  setName("Projects");
+
+  useEffect(() => {
+    setName("Projects");
+  }, [setName]);
 
   const renderProject = (project: Project) => {
     return (

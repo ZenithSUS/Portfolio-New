@@ -1,7 +1,14 @@
+import { useEffect } from "react";
 import { useNav } from "../context/navprovider";
+import { motion } from "motion/react";
+
 export default function Contact() {
   const { setName } = useNav();
-  setName("Contact");
+
+  useEffect(() => {
+    setName("Contact");
+  }, [setName]);
+
   return (
     <main className="flex flex-col gap-5 animate-fade-in h-fit">
       <div className="bg-slate-800 p-5 rounded-2xl border-l-4 border-blue-400">
@@ -20,13 +27,17 @@ export default function Contact() {
               <label htmlFor="name" className="font-bold text-blue-400">
                 Name
               </label>
-              <input
+              <motion.input
                 className="w-full bg-slate-950 rounded-md p-2"
                 type="text"
                 id="name"
                 name="name"
                 placeholder="Enter your name"
                 required
+                whileHover={{ scale: 1.05 }}
+                whileFocus={{
+                  boxShadow: "0 0 0 5px rgba(59, 130, 246, 0.5)",
+                }}
               />
             </div>
 
@@ -34,13 +45,17 @@ export default function Contact() {
               <label htmlFor="email" className="font-bold text-blue-400">
                 Email
               </label>
-              <input
+              <motion.input
                 className="w-full bg-slate-950 rounded-md p-2"
                 type="email"
                 id="email"
                 name="email"
                 placeholder="Enter your email"
                 required
+                whileHover={{ scale: 1.05 }}
+                whileFocus={{
+                  boxShadow: "0 0 0 5px rgba(59, 130, 246, 0.5)", // shadow-blue-500
+                }}
               />
             </div>
           </div>
@@ -48,13 +63,17 @@ export default function Contact() {
             <label htmlFor="subject" className="font-bold text-blue-400">
               Subject
             </label>
-            <input
+            <motion.input
               className="w-full bg-slate-950 rounded-md p-2"
               type="text"
               id="subject"
               name="subject"
               placeholder="Enter your subject"
               required
+              whileHover={{ scale: 1.02 }}
+              whileFocus={{
+                boxShadow: "0 0 0 5px rgba(59, 130, 246, 0.5)", // shadow-blue-500
+              }}
             />
           </div>
 
@@ -62,12 +81,16 @@ export default function Contact() {
             <label className="font-bold text-blue-400" htmlFor="message">
               Message
             </label>
-            <textarea
+            <motion.textarea
               className="w-full bg-slate-950 rounded-md p-2 h-40"
               id="message"
               name="message"
               placeholder="Enter your message"
               required
+              whileHover={{ scale: 1.02 }}
+              whileFocus={{
+                boxShadow: "0 0 0 5px rgba(59, 130, 246, 0.5)", // shadow-blue-500
+              }}
             />
           </div>
           <button
