@@ -19,7 +19,7 @@ export type Skill = {
 export type Social = {
   name: string;
   href: string;
-  image: string;
+  logo: React.ReactNode;
 };
 
 export type Contact = {
