@@ -15,7 +15,7 @@ export default function Info({ animationDone }: { animationDone: boolean }) {
       <header className="flex flex-col items-center p-5 gap-2">
         {!animationDone ? (
           <motion.div
-            key="before-animation" // Add unique key
+            key="before-animation"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -27,12 +27,12 @@ export default function Info({ animationDone }: { animationDone: boolean }) {
           </motion.div>
         ) : (
           <motion.div
-            key="after-animation" // Add unique key
+            key="after-animation"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            transition={{ duration: 5, ease: "easeInOut" }} // Adjusted duration
+            transition={{ duration: 5, ease: "easeInOut" }}
           >
             <img
               src={Jeran}
