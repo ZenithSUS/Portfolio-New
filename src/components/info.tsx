@@ -54,6 +54,22 @@ export default function Info() {
         </div>
       </div>
       <hr className="w-full" />
+
+      <div className="flex p-5 gap-2">
+        <a
+          href="https://www.linkedin.com/in/jeranmerino/"
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center gap-2"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+            alt="Linkedin"
+            className="w-10 h-10"
+          />
+          <p className="text-sm">Linkedin</p>
+        </a>
+      </div>
       <footer>
         <div className="flex flex-col items-center p-5 gap-2 my-5">
           <div className="flex flex-col gap-5">

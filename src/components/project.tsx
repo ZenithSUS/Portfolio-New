@@ -1,6 +1,6 @@
 export function ProjectCard({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex flex-col justify-evenly gap-5 bg-slate-800 p-5 rounded-2xl h-full w-96">
+    <div className="flex flex-col justify-around gap-5 bg-slate-800 p-5 rounded-2xl h-full w-96">
       {children}
     </div>
   );
@@ -8,7 +8,7 @@ export function ProjectCard({ children }: { children: React.ReactNode }) {
 
 export function ProjectWrapper({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex p-2 gap-7 w-full flex-wrap overflow-x-scroll scrollbar-default scrollbar-blue scroll-smooth scrollbar-hide hover:scrollbar-default">
+    <div className="flex p-2 gap-7 w-full flex-wrap overflow-x-scroll scrollbar-default scroll-smooth scrollbar-hide hover:scrollbar-default">
       {children}
     </div>
   );
@@ -19,7 +19,7 @@ export function ProjectImage({ src, alt }: { src: string; alt: string }) {
     <img
       src={src}
       alt={alt}
-      className="w-full h-60 object-cover rounded hover:scale-105"
+      className="w-full h-40 object-fit rounded hover:scale-105"
     />
   );
 }

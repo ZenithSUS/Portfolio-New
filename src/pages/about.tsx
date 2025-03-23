@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <main className="flex flex-col gap-5 animate-fade-in">
+    <main className="flex flex-col gap-5 animate-fade-in h-fit">
       <div className="bg-slate-800 p-5 rounded-2xl border-l-4 border-blue-400">
         <p>
           Hello,
