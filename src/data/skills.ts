@@ -23,6 +23,7 @@ import Axios from "../assets/tools/axios.png";
 import NPM from "../assets/tools/npm.png";
 import Vite from "../assets/tools/vite.png";
 import Railway from "../assets/tools/railway.png";
+import Vercel from "../assets/tools/vercel.png";
 
 export const frontend: Skill[] = [
   {
@@ -139,5 +140,9 @@ export const tools: Skill[] = [
   {
     name: "Railway",
     image: Railway,
+  },
+  {
+    name: "Vercel",
+    image: Vercel,
   },
 ];
