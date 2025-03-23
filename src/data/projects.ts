@@ -1,5 +1,5 @@
 import { Project } from "../libs/types";
-import CMS from "../assets/projects/CMS.png";
+import CMS from "../assets/projects/cms.png";
 import GreekMyth from "../assets/projects/greekmyth.png";
 import CtrlAltLearn from "../assets/projects/cal.png";
 import CyberGhost from "../assets/projects/cyberghost.png";
