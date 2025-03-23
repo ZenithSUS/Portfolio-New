@@ -33,7 +33,7 @@ export default function NavBar() {
         <Link
           key={nav.name}
           to={nav.href}
-          className={`py-2 px-4 transition-all duration-300 ${
+          className={`text-center py-2 px-4 transition-all duration-300 ${
             nav.active
               ? "text-blue-400 font-bold shadow-lg shadow-blue-500/30"
               : "text-gray-900 dark:text-white hover:text-lg hover:font-bold hover:shadow-xl hover:shadow-blue-500/20"
