@@ -1,6 +1,7 @@
 export type NavLink = {
   name: string;
   href: string;
+  active: boolean;
 };
 
 export type Project = {

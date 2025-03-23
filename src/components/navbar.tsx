@@ -1,23 +1,29 @@
+import { useNav } from "../context/navprovider";
 import { NavLink } from "../libs/types";
 import { Link } from "react-router-dom";
 
 export default function NavBar() {
-  const Navs = [
+  const { name } = useNav();
+  const Navs: NavLink[] = [
     {
       name: "About",
       href: "/",
+      active: name === "About",
     },
     {
       name: "Projects",
       href: "/projects",
+      active: name === "Projects",
     },
     {
       name: "Skills",
       href: "/skills",
+      active: name === "Skills",
     },
     {
       name: "Contact",
       href: "/contact",
+      active: name === "Contact",
     },
   ];
 
@@ -27,7 +33,11 @@ export default function NavBar() {
         <Link
           key={nav.name}
           to={nav.href}
-          className="py-2 px-4 text-gray-900 dark:text-white dark:hover:text-white hover:text-lg hover:font-bold hover:shadow-xl hover:shadow-blue-500 hover:inset-shadow-blue-500 transition-ease-in-out duration-300"
+          className={`py-2 px-4 transition-all duration-300 ${
+            nav.active
+              ? "text-blue-400 font-bold shadow-lg shadow-blue-500/30"
+              : "text-gray-900 dark:text-white hover:text-lg hover:font-bold hover:shadow-xl hover:shadow-blue-500/20"
+          }`}
         >
           {nav.name}
         </Link>

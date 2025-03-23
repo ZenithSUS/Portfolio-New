@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNav } from "../context/navprovider";
 import NavBar from "../components/navbar";
 import Info from "../components/info";
 import { Outlet } from "react-router-dom";
@@ -7,6 +8,7 @@ import { motion } from "framer-motion";
 
 const MainLayout = () => {
   const [animationDone, setAnimationDone] = useState(false);
+  const { name } = useNav();
 
   return (
     <Wrapper>
@@ -32,7 +34,7 @@ const MainLayout = () => {
             <div className="flex flex-col w-full gap-5 overflow-y-hidden">
               <div className="flex flex-col gap-2 md:flex-row justify-between items-center w-full md:h-10">
                 <h1 className="text-3xl font-bold border-b-3 border-blue-400">
-                  Portfolio
+                  {name}
                 </h1>
                 <NavBar />
               </div>

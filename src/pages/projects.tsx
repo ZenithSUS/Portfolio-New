@@ -1,3 +1,4 @@
+import { useNav } from "../context/navprovider";
 import { Project } from "../libs/types";
 import {
   ProjectCard,
@@ -9,6 +10,9 @@ import {
 import { projects, smallProjects } from "../data/projects";
 
 export default function Projects() {
+  const { setName } = useNav();
+  setName("Projects");
+
   const renderProject = (project: Project) => {
     return (
       <ProjectCard key={project.title}>

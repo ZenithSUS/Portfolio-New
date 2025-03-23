@@ -1,7 +1,11 @@
+import { useNav } from "../context/navprovider";
 import { frontend, backend, database, tools } from "../data/skills";
 import { SkillBox } from "../components/skill";
 
 export default function Skills() {
+  const { setName } = useNav();
+  setName("Skills");
+
   return (
     <main className="flex flex-col gap-5 animate-fade-in h-fit">
       <div className="bg-slate-800 p-5 rounded-2xl border-l-4 border-blue-400">

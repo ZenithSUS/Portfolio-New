@@ -1,4 +1,7 @@
+import { useNav } from "../context/navprovider";
 export default function Contact() {
+  const { setName } = useNav();
+  setName("Contact");
   return (
     <main className="flex flex-col gap-5 animate-fade-in h-fit">
       <div className="bg-slate-800 p-5 rounded-2xl border-l-4 border-blue-400">

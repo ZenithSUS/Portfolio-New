@@ -4,18 +4,20 @@ import About from "./pages/about";
 import Projects from "./pages/projects";
 import Skills from "./pages/skills";
 import Contact from "./pages/contact";
+import NotFound from "./pages/notfound";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route path="/" element={<About />} />
+          <Route index element={<About />} />
+          <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<h1>404</h1>} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

@@ -1,4 +1,9 @@
+import { useNav } from "../context/navprovider";
+
 export default function About() {
+  const { setName } = useNav();
+  setName("About");
+
   return (
     <main className="flex flex-col gap-5 animate-fade-in h-fit p-4 md:p-2 md:w-full ">
       <div className="bg-slate-800 p-5 rounded-2xl border-l-4 border-blue-400">
