@@ -36,7 +36,7 @@ export default function NavBar() {
           className={`text-center py-2 px-4 transition-all duration-300 ${
             nav.active
               ? "text-blue-400 font-bold shadow-lg shadow-blue-500/30"
-              : "text-gray-900 dark:text-white hover:text-lg hover:font-bold hover:shadow-xl hover:shadow-blue-500/20"
+              : "text-gray-900 text-white hover:text-lg hover:font-bold hover:shadow-xl hover:shadow-blue-500/20"
           }`}
         >
           {nav.name}
