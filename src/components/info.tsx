@@ -24,7 +24,7 @@ export default function Info({ animationDone }: { animationDone?: boolean }) {
         </motion.div>
       ) : (
         <motion.div
-          className="m-2 md:mr-0 rounded-2xl md:sticky md:top-0 md:left-0 md:max-h-[90vh] overflow-hidden flex flex-col"
+          className="m-2 md:mr-0 rounded-2xl md:sticky md:top-0 md:left-0 max-h-screen md:max-h-[90vh] overflow-hidden flex flex-col"
           animate={{
             backgroundColor: animationDone ? "#1E293B" : "transparent",
             transition: { duration: 5, ease: "easeInOut" },
