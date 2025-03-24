@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 export function ProjectCard({ children }: { children: React.ReactNode }) {
   return (
     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-      <div className="flex flex-col justify-around gap-5 bg-slate-800 p-5 rounded-2xl h-full w-96">
+      <div className="flex flex-col justify-around gap-5 bg-slate-950 p-5 rounded-2xl h-full w-96">
         {children}
       </div>
     </motion.div>

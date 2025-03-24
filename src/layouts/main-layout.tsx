@@ -30,7 +30,7 @@ const MainLayout = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 5, ease: "easeInOut" }}
         >
-          <div className="flex justify-center w-6xl max-w-full md:max-w-4xl p-5 bg-slate-950 rounded-2xl">
+          <div className="flex justify-center w-6xl max-w-full md:max-w-4xl p-5 bg-slate-800 rounded-2xl">
             <div className="flex flex-col w-full gap-5 overflow-y-hidden">
               <div className="flex flex-col gap-2 md:flex-row justify-between items-center w-full md:h-10">
                 <h1 className="text-3xl font-bold border-b-3 border-blue-400">

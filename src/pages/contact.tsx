@@ -11,7 +11,7 @@ export default function Contact() {
 
   return (
     <main className="flex flex-col gap-5 animate-fade-in h-fit">
-      <div className="bg-slate-800 p-5 rounded-2xl border-l-4 border-blue-400">
+      <div className="bg-slate-950 p-5 rounded-2xl border-l-4 border-blue-400">
         <p>
           Let's connect and{" "}
           <span className="font-bold text-blue-400">
@@ -21,7 +21,7 @@ export default function Contact() {
       </div>
 
       <form>
-        <div className="flex flex-col gap-5 bg-slate-800 p-5 rounded-2xl">
+        <div className="flex flex-col gap-5 bg-slate-950 p-5 rounded-2xl">
           <div className="grid grid-cols-2 w-full gap-5">
             <div className="flex flex-col gap-2">
               <label htmlFor="name" className="font-bold text-blue-400">

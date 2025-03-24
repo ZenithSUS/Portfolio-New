@@ -28,7 +28,7 @@ export default function NavBar() {
   ];
 
   return (
-    <nav className="grid grid-cols-2 md:flex md:flex-row md:gap-5 justify-center items-center bg-slate-800 rounded">
+    <nav className="grid grid-cols-2 md:flex md:flex-row md:gap-5 justify-center items-center bg-slate-950 rounded">
       {Navs.map((nav: NavLink) => (
         <Link
           key={nav.name}

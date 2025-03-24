@@ -28,7 +28,7 @@ export default function Projects() {
           <div className="grid grid-cols-3 items-center gap-2 text-center">
             {project.tech.map((tech: string) => (
               <div
-                className="p-2 bg-slate-950 rounded-2xl hover:bg-slate-900 transition-ease-in-out duration-300 cursor-pointer"
+                className="p-2 bg-slate-950 rounded-2xl hover:bg-slate-800 transition-ease-in-out duration-300 cursor-pointer"
                 key={tech}
               >
                 {tech}

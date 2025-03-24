@@ -10,7 +10,7 @@ export default function About() {
 
   return (
     <main className="flex flex-col gap-5 animate-fade-in h-fit p-4 md:p-2 md:w-full ">
-      <div className="bg-slate-800 p-5 rounded-2xl border-l-4 border-blue-400">
+      <div className="bg-slate-950 p-5 rounded-2xl border-l-4 border-blue-400">
         <p>
           Hello,
           <span className="font-bold text-blue-400">
@@ -23,7 +23,7 @@ export default function About() {
         </p>
       </div>
       <div className="flex flex-col md:flex-row gap-5">
-        <div className="bg-slate-800 p-5 rounded-2xl">
+        <div className="bg-slate-950 p-5 rounded-2xl">
           <div className="flex flex-col gap-1">
             <h2 className="font-bold text-blue-400">Expertise</h2>
             <p>
@@ -35,7 +35,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="bg-slate-800 p-5 rounded-2xl">
+        <div className="bg-slate-950 p-5 rounded-2xl">
           <div className="flex flex-col gap-1">
             <h2 className="font-bold text-blue-400">Experience</h2>
             <p>
@@ -51,7 +51,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="bg-slate-800 p-5 rounded-2xl">
+      <div className="bg-slate-950 p-5 rounded-2xl">
         <div className="flex flex-col gap-1">
           <h2 className="font-bold text-blue-400">
             Let’s Build Something Awesome!
