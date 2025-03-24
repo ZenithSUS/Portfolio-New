@@ -17,9 +17,15 @@ const MainLayout = () => {
           initial={{ x: 500, y: 200 }}
           animate={{
             x: [0, 200, 200, -200, -200, 0],
-            y: [0, 0, 200, 200, -50, 0],
+            y: [0, 0, 200, 200, -200, 0],
+            scale: [1, 1, 1, 1, 1, 0],
           }}
-          transition={{ duration: 10 }}
+          transition={{
+            duration: 10,
+            delay: 1,
+            ease: "linear",
+            bounce: 0.5,
+          }}
           onAnimationComplete={() => setAnimationDone(true)}
         >
           <Info animationDone={animationDone} />

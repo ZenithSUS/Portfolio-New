@@ -8,12 +8,15 @@ export default function Info({ animationDone }: { animationDone?: boolean }) {
     <>
       {!animationDone ? (
         <motion.div
-          className="flex justify-center items-center border-none overflow-hidden"
+          className="flex justify-center items-center min-h-screen border-none overflow-hidden"
           key="before-animation"
         >
           <motion.img
             src={Jeran}
             alt="Jeran"
+            animate={{
+              filter: "drop-shadow(0 0 0.75rem rgb(255, 217, 0))",
+            }}
             className="w-40 h-40 rounded-full object-fit"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
