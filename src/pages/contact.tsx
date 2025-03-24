@@ -28,7 +28,7 @@ export default function Contact() {
                 Name
               </label>
               <motion.input
-                className="w-full bg-slate-950 rounded-md p-2"
+                className="w-full bg-slate-800 rounded-md p-2"
                 type="text"
                 id="name"
                 name="name"
@@ -46,7 +46,7 @@ export default function Contact() {
                 Email
               </label>
               <motion.input
-                className="w-full bg-slate-950 rounded-md p-2"
+                className="w-full bg-slate-800 rounded-md p-2"
                 type="email"
                 id="email"
                 name="email"
@@ -54,7 +54,7 @@ export default function Contact() {
                 required
                 whileHover={{ scale: 1.05 }}
                 whileFocus={{
-                  boxShadow: "0 0 0 5px rgba(59, 130, 246, 0.5)", // shadow-blue-500
+                  boxShadow: "0 0 0 5px rgba(59, 130, 246, 0.5)",
                 }}
               />
             </div>
@@ -64,7 +64,7 @@ export default function Contact() {
               Subject
             </label>
             <motion.input
-              className="w-full bg-slate-950 rounded-md p-2"
+              className="w-full bg-slate-800 rounded-md p-2"
               type="text"
               id="subject"
               name="subject"
@@ -72,7 +72,7 @@ export default function Contact() {
               required
               whileHover={{ scale: 1.02 }}
               whileFocus={{
-                boxShadow: "0 0 0 5px rgba(59, 130, 246, 0.5)", // shadow-blue-500
+                boxShadow: "0 0 0 5px rgba(59, 130, 246, 0.5)",
               }}
             />
           </div>
@@ -82,19 +82,19 @@ export default function Contact() {
               Message
             </label>
             <motion.textarea
-              className="w-full bg-slate-950 rounded-md p-2 h-40"
+              className="w-full bg-slate-800 rounded-md p-2 h-40"
               id="message"
               name="message"
               placeholder="Enter your message"
               required
               whileHover={{ scale: 1.02 }}
               whileFocus={{
-                boxShadow: "0 0 0 5px rgba(59, 130, 246, 0.5)", // shadow-blue-500
+                boxShadow: "0 0 0 5px rgba(59, 130, 246, 0.5)",
               }}
             />
           </div>
           <button
-            className="w-full bg-slate-950 rounded-md p-2 hover:shadow-lg hover:shadow-blue-500 hover:bg-slate-900 cursor-pointer transition-ease-in-out duration-300"
+            className="w-full bg-slate-800 rounded-md p-2 hover:shadow-lg hover:shadow-blue-500 hover:bg-slate-900 cursor-pointer transition-ease-in-out duration-300"
             type="submit"
           >
             Send

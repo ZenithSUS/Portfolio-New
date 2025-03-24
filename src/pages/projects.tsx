@@ -28,7 +28,7 @@ export default function Projects() {
           <div className="grid grid-cols-3 items-center gap-2 text-center">
             {project.tech.map((tech: string) => (
               <div
-                className="p-2 bg-slate-950 rounded-2xl hover:bg-slate-800 transition-ease-in-out duration-300 cursor-pointer"
+                className="p-2 bg-slate-800 rounded-2xl hover:bg-slate-900 transition-ease-in-out duration-300 cursor-pointer"
                 key={tech}
               >
                 {tech}
@@ -50,7 +50,7 @@ export default function Projects() {
 
   return (
     <main className="flex flex-col gap-5 animate-fade-in h-fit">
-      <div className="flex flex-wrap gap-3 max-h-screen overflow-y-scroll scrollbar-default scroll-smooth scrollbar-hide hover:scrollbar-defaulthover:scrollbar-default">
+      <div className="flex flex-wrap gap-3 max-h-screen overflow-y-scroll scrollbar-default scroll-smooth scrollbar-hide hover:scrollbar-default hover:scrollbar-default">
         <h1 className="text-2xl font-bold text-blue-400">Featured Projects</h1>
         <ProjectWrapper>
           <ProjectBox>

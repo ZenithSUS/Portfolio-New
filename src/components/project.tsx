@@ -11,7 +11,7 @@ export function ProjectCard({ children }: { children: React.ReactNode }) {
 
 export function ProjectWrapper({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex p-2 gap-7 w-full flex-wrap overflow-y-hidden overflow-x-scroll scrollbar-default scroll-smooth scrollbar-hide hover:scrollbar-default">
+    <div className="flex p-2 gap-7 max-w-screen flex-wrap overflow-hidden overflow-x-scroll scrollbar-default scroll-smooth scrollbar-hide hover:scrollbar-default">
       {children}
     </div>
   );
@@ -22,7 +22,7 @@ export function ProjectImage({ src, alt }: { src: string; alt: string }) {
     <img
       src={src}
       alt={alt}
-      className="w-full h-40 object-fit rounded hover:scale-105"
+      className="w-full h-30 object-cover rounded hover:scale-105"
     />
   );
 }
