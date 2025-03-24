@@ -25,9 +25,21 @@
 
 /* Show scrollbar on hover */
 .scrollbar-default:hover {
-  scrollbar-width: auto;
+  scrollbar-width: thin;
   -ms-overflow-style: auto;
   scrollbar-color: #3b82f6 #e0f2fe;
+  scrollbar-gutter: stable;
+  scroll-margin-right: 12px;
+}
+
+.scrollbar-default-hide::-webkit-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: auto;
+  scrollbar-gutter: stable;
+}
+
+.scrollbar-default::-webkit-scrollbar {
+  display: none;
 }
 
 .scrollbar-default:hover::-webkit-scrollbar {

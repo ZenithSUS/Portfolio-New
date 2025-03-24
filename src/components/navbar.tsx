@@ -28,15 +28,15 @@ export default function NavBar() {
   ];
 
   return (
-    <nav className="grid grid-cols-2 md:flex md:flex-row md:gap-5 justify-center items-center bg-slate-800 rounded">
+    <nav className="grid grid-cols-2 md:flex md:flex-row md:gap-5 justify-center items-center bg-slate-950 rounded-3xl">
       {Navs.map((nav: NavLink) => (
         <Link
           key={nav.name}
           to={nav.href}
           className={`text-center py-2 px-4 transition-all duration-300 ${
             nav.active
-              ? "text-blue-400 font-bold shadow-lg shadow-blue-500/30 bg-slate-950 rounded-3xl"
-              : "text-white hover:text-lg hover:bg-slate-950 hover:font-bold hover:shadow-xl hover:shadow-blue-500/20 rounded-3xl"
+              ? "text-blue-400 font-bold shadow-lg shadow-blue-500/30 bg-slate-800 rounded-3xl"
+              : "text-white hover:text-lg hover:bg-slate-800 hover:font-bold hover:shadow-xl hover:shadow-blue-500/20 hover:text-blue-400 rounded-3xl"
           }`}
         >
           {nav.name}

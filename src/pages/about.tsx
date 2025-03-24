@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useNav } from "../context/navprovider";
+import { motion } from "motion/react";
 
 export default function About() {
   const { setName } = useNav();
@@ -9,7 +10,10 @@ export default function About() {
   }, [setName]);
 
   return (
-    <main className="flex flex-col gap-5 animate-fade-in h-fit p-4 md:p-2 md:w-full ">
+    <motion.main
+      className="flex flex-col gap-5 animate-fade-in h-fit p-4 md:p-2 md:w-full overflow-y-auto scrollbar-default scroll-smooth"
+      whileHover={{ scale: 0.98 }}
+    >
       <div className="bg-slate-950 p-5 rounded-2xl border-l-4 border-blue-400">
         <p>
           Hello,
@@ -64,6 +68,6 @@ export default function About() {
           </p>
         </div>
       </div>
-    </main>
+    </motion.main>
   );
 }

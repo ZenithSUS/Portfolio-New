@@ -10,7 +10,10 @@ export default function Contact() {
   }, [setName]);
 
   return (
-    <main className="flex flex-col gap-5 animate-fade-in h-fit">
+    <motion.main
+      className="flex flex-col flex-grow gap-5 animate-fade-in overflow-y-auto scrollbar-default scroll-smooth"
+      whileHover={{ scale: 0.98 }}
+    >
       <div className="bg-slate-950 p-5 rounded-2xl border-l-4 border-blue-400">
         <p>
           Let's connect and{" "}
@@ -101,6 +104,6 @@ export default function Contact() {
           </button>
         </div>
       </form>
-    </main>
+    </motion.main>
   );
 }

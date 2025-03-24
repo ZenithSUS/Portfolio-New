@@ -32,8 +32,12 @@ const MainLayout = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 5, ease: "easeInOut" }}
           >
-            <main className="grid p-5 bg-slate-800 rounded-2xl m-2 overflow-hidden">
-              <div className="flex flex-col w-full gap-5 overflow-y-auto">
+            <motion.main
+              className="grid p-5 bg-slate-800 rounded-2xl m-2 overflow-hidden"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+            >
+              <div className="flex flex-col w-full gap-5 md:max-h-[85vh] overflow-hidden">
                 <div className="flex flex-col gap-2 md:flex-row justify-between items-center w-full md:h-10">
                   <h1 className="text-3xl font-bold border-b-3 border-blue-400">
                     {name}
@@ -42,7 +46,7 @@ const MainLayout = () => {
                 </div>
                 <Outlet />
               </div>
-            </main>
+            </motion.main>
           </motion.div>
         </Wrapper>
       )}

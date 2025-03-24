@@ -21,13 +21,19 @@ export default function Info({ animationDone }: { animationDone?: boolean }) {
         </motion.div>
       ) : (
         <motion.div
-          className="m-2 mr-0 rounded-2xl sticky top-0 left-0 max-h-screen"
+          className="m-2 md:mr-0 rounded-2xl md:sticky md:top-0 md:left-0 md:max-h-[90vh] overflow-hidden flex flex-col"
           animate={{
             backgroundColor: animationDone ? "#1E293B" : "transparent",
             transition: { duration: 5, ease: "easeInOut" },
           }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
         >
-          <main className="max-h-screen">
+          <motion.main
+            className="md:max-h-screen flex-grow overflow-y-auto scrollbar-default-hide cursor-grabbing"
+            whileFocus={{ backgroundColor: "#1E293B" }}
+            whileHover={{ scale: 0.95 }}
+          >
             <header className="flex flex-col items-center p-2 gap-2">
               <motion.div
                 key="after-animation"
@@ -95,20 +101,19 @@ export default function Info({ animationDone }: { animationDone?: boolean }) {
                     </motion.a>
                   ))}
                 </div>
-
-                <footer>
-                  <div className="flex flex-col items-center px-2 py-3 gap-2 my-2">
-                    <div className="flex flex-col gap-5">
-                      <p className="text-sm text-gray-500 text-center">
-                        &copy; {new Date().getFullYear()} Jeran Christopher
-                        Merino. All rights reserved.
-                      </p>
-                    </div>
-                  </div>
-                </footer>
               </motion.div>
             </header>
-          </main>
+            <footer>
+              <div className="flex flex-col items-center px-2 py-3 gap-2 my-2">
+                <div className="flex flex-col gap-5">
+                  <p className="text-sm text-gray-500 text-center">
+                    &copy; {new Date().getFullYear()} Jeran Christopher Merino.
+                    All rights reserved.
+                  </p>
+                </div>
+              </div>
+            </footer>
+          </motion.main>
         </motion.div>
       )}
     </>

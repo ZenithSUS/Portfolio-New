@@ -49,8 +49,8 @@ export default function Projects() {
   };
 
   return (
-    <main className="flex flex-col gap-5 animate-fade-in h-fit">
-      <div className="flex flex-wrap gap-3 max-h-screen overflow-y-scroll scrollbar-default scroll-smooth scrollbar-hide hover:scrollbar-default hover:scrollbar-default">
+    <main className="flex flex-col gap-5 animate-fade-in overflow-y-auto scrollbar-default scroll-smooth">
+      <div className="flex flex-wrap gap-3 justify-center">
         <h1 className="text-2xl font-bold text-blue-400">Featured Projects</h1>
         <ProjectWrapper>
           <ProjectBox>
