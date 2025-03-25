@@ -21,9 +21,9 @@ const MainLayout = () => {
             scale: [1, 1, 1, 1, 1, 0],
           }}
           transition={{
-            duration: 10,
-            delay: 1,
-            ease: "linear",
+            duration: 5,
+            delay: 0.5,
+            ease: [0.25, 1, 0.5, 1],
             bounce: 0.5,
           }}
           onAnimationComplete={() => setAnimationDone(true)}
@@ -43,7 +43,7 @@ const MainLayout = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
             >
-              <div className="flex flex-col w-full gap-5 max-h-screen md:max-h-[85vh] overflow-hidden">
+              <div className="flex flex-col w-full gap-5 max-h-screen md:max-h-[85dvh] overflow-hidden">
                 <div className="flex flex-col gap-2 md:flex-row justify-between items-center w-full md:h-10">
                   <h1 className="text-3xl font-bold border-b-3 border-blue-400">
                     {name}
