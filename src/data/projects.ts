@@ -7,7 +7,7 @@ import GreekMythApi from "../assets/projects/greekmythApi.png";
 import TodoApp from "../assets/projects/todoApp.png";
 import ProdSystem from "../assets/projects/prodSystem.jpg";
 import Monitoring from "../assets/projects/monitoring.png";
-import ZenithBooth from "../assets/projects/zenithBooth.png";
+import ZenithBooth from "../assets/projects/zenithbooth.png";
 
 export const projects: Project[] = [
   {
