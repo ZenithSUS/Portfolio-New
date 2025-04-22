@@ -4,12 +4,20 @@ import GreekMyth from "../assets/projects/greekmyth.png";
 import CtrlAltLearn from "../assets/projects/cal.png";
 import CyberGhost from "../assets/projects/cyberghost.png";
 import GreekMythApi from "../assets/projects/greekmythApi.png";
-import NoteTakingApp from "../assets/projects/noteTaking.jpg";
 import TodoApp from "../assets/projects/todoApp.png";
 import ProdSystem from "../assets/projects/prodSystem.jpg";
 import Monitoring from "../assets/projects/monitoring.png";
+import ZenithBooth from "../assets/projects/zenithBooth.png";
 
 export const projects: Project[] = [
+  {
+    title: "Zenith Booth",
+    description:
+      "Zenith Booth is a web application that allows users to take 3 quick pictures and share the picture to the website. It provides a user-friendly interface for booth creation, customization, and management.",
+    tech: ["React", "Tailwind", "Appwrite"],
+    image: ZenithBooth,
+    href: "https://zenithbooth.onrender.com",
+  },
   {
     title: "Compliance Monitoring System",
     description:
@@ -60,14 +68,6 @@ export const smallProjects: Project[] = [
     tech: ["HTML", "CSS", "JavaScript"],
     image: CyberGhost,
     href: "https://zenithsus.github.io/finalProject_ITEC111/",
-  },
-  {
-    title: "Note Taking App",
-    description:
-      "Note taking app is a simple website that performs CRUD operations.",
-    tech: ["React", "Tailwind", "PHP", "MySQL"],
-    image: NoteTakingApp,
-    href: "https://github.com/ZenithSUS/note-taking-app",
   },
   {
     title: "Product Managment System",

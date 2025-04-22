@@ -1,10 +1,11 @@
+import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import { useNav } from "../context/navprovider";
-import NavBar from "../components/navbar";
-import Info from "../components/info";
-import { Outlet } from "react-router-dom";
-import Wrapper from "../components/wrapper";
 import { motion } from "framer-motion";
+import Particle from "../components/particles";
+import Info from "../components/info";
+import NavBar from "../components/navbar";
+import Wrapper from "../components/wrapper";
 
 const MainLayout = () => {
   const [animationDone, setAnimationDone] = useState(false);
@@ -12,6 +13,7 @@ const MainLayout = () => {
 
   return (
     <>
+      <Particle />
       {!animationDone ? (
         <motion.div
           initial={{ x: 500, y: 200 }}

@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 export const SkillBox = ({ skills }: { skills: Skill[] }) => {
   return (
-    <div className="grid grid-cols-4 items-center gap-2 p-2">
+    <div className="grid grid-cols-4 md:grid-cols-3 lg:grid-cols-4 items-center gap-2 p-2">
       {skills.map((skill: Skill) => (
         <motion.div
           key={skill.name}
