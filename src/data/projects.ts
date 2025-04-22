@@ -1,13 +1,13 @@
 import { Project } from "../libs/types";
-import CMS from "../assets/projects/cms.png";
-import GreekMyth from "../assets/projects/greekmyth.png";
-import CtrlAltLearn from "../assets/projects/cal.png";
-import CyberGhost from "../assets/projects/cyberghost.png";
-import GreekMythApi from "../assets/projects/greekmythApi.png";
-import TodoApp from "../assets/projects/todoApp.png";
-import ProdSystem from "../assets/projects/prodSystem.jpg";
-import Monitoring from "../assets/projects/monitoring.png";
-import ZenithBooth from "../assets/projects/zenithbooth.png";
+import CMS from "../assets/projects/cms.webp";
+import GreekMyth from "../assets/projects/greekmyth.webp";
+import CtrlAltLearn from "../assets/projects/cal.webp";
+import CyberGhost from "../assets/projects/cyberghost.webp";
+import GreekMythApi from "../assets/projects/greekmythApi.webp";
+import TodoApp from "../assets/projects/todoApp.webp";
+import ProdSystem from "../assets/projects/prodSystem.webp";
+import Monitoring from "../assets/projects/monitoring.webp";
+import ZenithBooth from "../assets/projects/zenithbooth.webp";
 
 export const projects: Project[] = [
   {

@@ -1,4 +1,4 @@
-import Jeran from "../assets/jeran.jpg";
+import Jeran from "../assets/jeran.webp";
 import { Contact, Social } from "../libs/types";
 import { Contacts, Socials } from "../data/socials";
 import { motion } from "motion/react";
