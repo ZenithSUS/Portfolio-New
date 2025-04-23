@@ -6,6 +6,7 @@ import Particle from "../components/particles";
 import Info from "../components/info";
 import NavBar from "../components/navbar";
 import Wrapper from "../components/wrapper";
+import Chatbot from "../components/chatbot";
 
 const MainLayout = () => {
   const [animationDone, setAnimationDone] = useState(false);
@@ -54,6 +55,7 @@ const MainLayout = () => {
                 </div>
                 <Outlet />
               </div>
+              <Chatbot />
             </motion.main>
           </motion.div>
         </Wrapper>
