@@ -1,6 +1,5 @@
 import chatResponse from "../services/mistral";
 import { useEffect, useRef, useState } from "react";
-import { AiFillRobot } from "react-icons/ai";
 import { MistralChatResponse, Message } from "../libs/types";
 import ZenithAI from "../assets/zenithai.gif";
 
