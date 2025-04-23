@@ -33,7 +33,7 @@ export default async function chatResponse(message: string) {
 
 async function mistralChat(message: string) {
   const response = await client.chat.complete({
-    model: "mistral-large-latest",
+    model: "mistral-tiny-latest",
     messages: [
       {
         role: "system",

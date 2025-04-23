@@ -1,9 +1,13 @@
 import chatResponse from "../services/mistral";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useTransition } from "react";
 import { MistralChatResponse, Message } from "../libs/types";
+import { FaRegWindowClose } from "react-icons/fa";
+import { IoSend } from "react-icons/io5";
+import { motion } from "motion/react";
 import ZenithAI from "../assets/zenithai.gif";
 
 export default function Chatbot() {
+  const [isPending, startTransition] = useTransition();
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState<Message[]>([]);
@@ -19,21 +23,21 @@ export default function Chatbot() {
       setMessage("");
       setLoading(true);
 
-      const response: MistralChatResponse = await chatResponse(message);
-      console.log("Response:", response);
+      startTransition(async () => {
+        const response: MistralChatResponse = await chatResponse(message);
+        console.log("Response:", response);
 
-      if (!response) {
+        if (!response) {
+          setLoading(false);
+          setError("No response from the server.");
+          return;
+        }
+        setMessages((prev) => [
+          ...prev,
+          { text: response.content, sender: "assistant" },
+        ]);
         setLoading(false);
-        setError("No response from the server.");
-        return;
-      }
-
-      setMessages((prev) => [
-        ...prev,
-        { text: response.content, sender: "assistant" },
-      ]);
-
-      setLoading(false);
+      });
     } catch (error) {
       setLoading(false);
       setError("An error occurred while fetching the response.");
@@ -50,17 +54,22 @@ export default function Chatbot() {
 
   if (!isOpen) {
     return (
-      <div
+      <motion.div
         className="fixed bottom-4 right-4 z-50 p-2 bg-slate-800 rounded-full shadow-lg cursor-pointer"
         onClick={() => setIsOpen(true)}
+        whileHover={{ scale: 1.1 }}
       >
         <img src={ZenithAI} alt="Zenith AI" className="w-20 h-20" />
-      </div>
+      </motion.div>
     );
   }
 
   return (
-    <div className="fixed bottom-0 right-0 p-4 w-[90%] md:w-[40%] lg:w-[500px] lg:h-[500px] bg-slate-800 shadow-lg rounded-lg m-4">
+    <motion.div
+      className="fixed bottom-0 right-0 p-4 w-[90%] md:w-[40%] lg:w-[500px] lg:h-[500px] bg-slate-800 ring-2 ring-blue-400 rounded-lg m-4"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+    >
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold border-b-3 border-blue-400 w-fit">
           ZenithAI
@@ -69,12 +78,12 @@ export default function Chatbot() {
           className="text-red-500 hover:text-red-700"
           onClick={() => setIsOpen(false)}
         >
-          Close
+          <FaRegWindowClose size={24} />
         </button>
       </div>
       <div className="flex flex-col space-y-4">
-        <div className="flex items-center space-x-2">
-          <input
+        <div className="flex items-center space-x-1 md:space-x-2 w-full">
+          <motion.input
             type="text"
             placeholder="Type your message..."
             value={message}
@@ -85,12 +94,14 @@ export default function Chatbot() {
               }
             }}
             className="flex-grow rounded border border-gray-300 p-2"
+            whileHover={{ scale: 1.02 }}
           />
           <button
-            className="rounded bg-blue-500 px-4 py-2 text-white"
+            className="rounded bg-blue-500 px-4 py-2 text-white disabled:gray-400"
             onClick={handleSend}
+            disabled={isPending}
           >
-            Send
+            <IoSend size={24} />
           </button>
         </div>
         <div
@@ -111,6 +122,6 @@ export default function Chatbot() {
           {error && <div className="text-red-500">{error}</div>}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

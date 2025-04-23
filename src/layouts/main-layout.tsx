@@ -55,9 +55,9 @@ const MainLayout = () => {
                 </div>
                 <Outlet />
               </div>
-              <Chatbot />
             </motion.main>
           </motion.div>
+          <Chatbot />
         </Wrapper>
       )}
     </>
