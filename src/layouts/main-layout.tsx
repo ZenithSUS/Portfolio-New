@@ -24,7 +24,7 @@ const MainLayout = () => {
             scale: [1, 1, 1, 1, 1, 0],
           }}
           transition={{
-            duration: 5,
+            duration: 3,
             delay: 0.5,
             ease: [0.25, 1, 0.5, 1],
             bounce: 0.5,

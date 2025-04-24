@@ -4,6 +4,7 @@ import { Message } from "../libs/types";
 import { FaRegWindowClose } from "react-icons/fa";
 import { IoSend } from "react-icons/io5";
 import { motion } from "motion/react";
+import Markdown from "react-markdown";
 import ZenithAI from "../assets/zenithai.gif";
 
 export default function Chatbot() {
@@ -116,14 +117,16 @@ export default function Chatbot() {
           className="flex h-80 flex-col space-y-2 overflow-y-auto rounded border border-gray-300 p-2"
         >
           {messages.map((msg, index) => (
-            <p
-              key={index}
-              className={`rounded p-2 break-all ${
-                msg.sender === "user" ? "bg-slate-950" : "bg-slate-700"
+            <div
+              className={`flex flex-col p-2 ${
+                msg.sender === "user"
+                  ? "bg-slate-950 items-end"
+                  : "bg-slate-700 items-start"
               }`}
+              key={index}
             >
-              {msg.text}
-            </p>
+              <Markdown>{msg.text}</Markdown>
+            </div>
           ))}
 
           {streamingMessage && (
@@ -133,7 +136,7 @@ export default function Chatbot() {
             </p>
           )}
           {loading && !streamingMessage && (
-            <div className="text-white">Zenith is typing...</div>
+            <div className="text-white p-2">Zenith is typing...</div>
           )}
           {error && <div className="text-red-500">{error}</div>}
         </div>
