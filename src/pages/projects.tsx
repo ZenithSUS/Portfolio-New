@@ -1,6 +1,7 @@
 import { useNav } from "../context/navprovider";
 import { useEffect } from "react";
 import { Project } from "../libs/types";
+import { useNavigate } from "react-router-dom";
 import {
   ProjectCard,
   ProjectWrapper,
@@ -12,6 +13,7 @@ import { projects, smallProjects } from "../data/projects";
 
 export default function Projects() {
   const { setName } = useNav();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setName("Projects");
@@ -35,14 +37,24 @@ export default function Projects() {
               </div>
             ))}
           </div>
-          <a
-            className="p-2 bg-blue-500 rounded-2xl hover:bg-blue-400 transition-ease-in-out duration-300 cursor-pointer w-fit"
-            href={project.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Project
-          </a>
+
+          <h2 className="font-bold text-blue-400">Sources</h2>
+          <div className="flex gap-2 items-center">
+            <a
+              className="p-2 bg-blue-500 rounded-2xl hover:bg-blue-400 transition-ease-in-out duration-300 cursor-pointer w-fit"
+              href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Project
+            </a>
+            <button
+              className="p-2 bg-blue-500 rounded-2xl hover:bg-blue-400 transition-ease-in-out duration-300 cursor-pointer w-fit"
+              onClick={() => navigate(`/project/${project.name}`)}
+            >
+              More Info
+            </button>
+          </div>
         </div>
       </ProjectCard>
     );

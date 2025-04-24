@@ -37,37 +37,105 @@ Projects:
 1. Zenith Booth - Zenith Booth is a web application that allows users to take 3 quick pictures and share the picture to the website. It provides a user-friendly interface for booth creation, customization, and management.
     - Tech Stack: React, Tailwind, Appwrite
     - Link: https://zenithbooth.onrender.com
+    - Features:
+      - Intuitive Booth Management
+      - Custom templates
+      - Voting System
+      - Account Dashboard
+      - Photo Sharing
+      - Secure Authentication
     - Date Completed: April 21, 2025
 2. Compliance Monitoring System - A secure system for monitoring and managing compliance policies. It ensures data privacy, supports tracking, and integrates third-party authentication, for a seamless experience.
       - Tech Stack: React, Tailwind, Node.js, Express.js, Appwrite
       - Link: https://github.com/ZenithSUS/monitoring-system-admin
+      - Features:
+        - Compliance Dashboard
+        - Expiration Alerts
+        - Document Storage
+        - Analytics Reports
+        - Real-time Tracking
+        - Account Management
+        - Data Security
       - Date Completed: March 21, 2025
 3. Content Management System - A secure system for managing user registration, authentication, profiles, and role-based access. It ensures data privacy, supports profile customization, and integrates third-party authentication for a seamless experience.
       - Tech Stack: HTML, CSS, JavaScript, PHP, MySQL
       - Link: https://greekmythcms.infinityfreeapp.com/
+      - Features:
+        - Admin Dashboard
+        - User Registration
+        - UI Customization
+        - CRUD Operations
+        - User Authentication
+        - Profile Management
+        - Role-based Access Control
+        - Data Privacy
+      - Date Completed: December 28, 2024
 4. GreekMyth - GreekMyth is an interactive platform designed for mythology enthusiasts to explore their creativity by crafting and sharing their own Greek mythology-inspired stories.
         - Tech Stack: HTML, CSS, JavaScript, PHP, MySQL
         - Link: https://zenithsus.infinityfreeapp.com/
+        - Features:
+          - User Registration and Authentication
+          - Content Creation
+          - Group Creation
+          - Friend and Voting System
+          - User Profiles
+          - Account Management
+          - Search Functionality
+          - Data Privacy
         - Date Completed: September 21, 2024
 5. Ctrl+Alt+Learn - Ctrl+Alt+Learn is about tackling web development, where students can learn web development by playing this game. They can earn rewards, achievements, and participate in PvP (speedrun) to duel against other students.
         - Tech Stack: Next.js, Tailwind, Prisma, MySQL
         - Link: https://calgame.vercel.app/
+        - Features:
+            - User Registration and Authentication
+            - Gamification
+            - Leaderboard
+            - Achievements
+            - Rewards System
+            - PvP Speedrun
+            - Character Customization
+            - Progress Tracking
         - Date Completed: January 10, 2025
 6. GreekMyth API - GreekMyth API is a RESTful API that allows users to create, read, update, and delete Greek mythology-inspired stories.
           - Tech Stack: PHP, MySQL
           - Link: N/A
+          - Features:
+            - API Endpoints
+            - CRUD Operations
+            - Data Privacy
+            - Role-based Access Control
           - Date Completed: December 28, 2024
 7. CyberGhost - A web application that allows users to create and manage their own virtual private network (VPN) for secure browsing and data protection.
       - Tech Stack: HTML, "CSS, JavaScript
       - Link: https://zenithsus.github.io/finalProject_ITEC111/
+      - Features:
+        - Text Encryption
+        - Text Decryption
+        - CRUD Operations
+        - User Authentication
+        - Secure Algorithm
       - Date Completed: December 12, 2024
 8. Product System - A web application that allows users to manage and track products, including inventory management and sales tracking.
         - Tech Stack: HTML, CSS, JavaScript
         - Link: https://zenithsus.github.io/productSystem/
+            - Features:
+            - Product Management
+            - CRUD Operations
+            - User Authentication
+            - Inventory Tracking
         - Date Completed: December 8, 2024
 9. GreekMyth CMS - A content management system for managing Greek mythology-inspired stories and content.
           - Tech Stack: HTML, CSS, JavaScript, PHP, MySQL
           - Link: https://greekmythcms.infinityfreeapp.com/
+          - Features:
+            - User Registration and Authentication
+            - Content Creation
+            - Group Creation
+            - Friend and Voting System
+            - User Profiles
+            - Account Management
+            - Search Functionality
+            - Data Privacy
           - Date Completed: December 28, 2024
 
 Top 3 Projects:
