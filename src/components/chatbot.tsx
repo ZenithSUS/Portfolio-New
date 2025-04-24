@@ -1,6 +1,6 @@
 import chatResponse from "../services/mistral";
 import { useEffect, useRef, useState, useTransition } from "react";
-import { MistralChatResponse, Message } from "../libs/types";
+import { Message } from "../libs/types";
 import { FaRegWindowClose } from "react-icons/fa";
 import { IoSend } from "react-icons/io5";
 import { motion } from "motion/react";
@@ -13,6 +13,7 @@ export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [streamingMessage, setStreamingMessage] = useState<string>("");
 
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
@@ -22,20 +23,21 @@ export default function Chatbot() {
       setMessages((prev) => [...prev, { text: message, sender: "user" }]);
       setMessage("");
       setLoading(true);
+      setStreamingMessage("");
 
       startTransition(async () => {
-        const response: MistralChatResponse = await chatResponse(message);
-        console.log("Response:", response);
+        let fullResponse = "";
 
-        if (!response) {
-          setLoading(false);
-          setError("No response from the server.");
-          return;
-        }
+        await chatResponse(message, true, (chunk) => {
+          fullResponse += chunk;
+          setStreamingMessage((prev) => prev + chunk);
+        });
+
         setMessages((prev) => [
           ...prev,
-          { text: response.content, sender: "assistant" },
+          { text: fullResponse, sender: "assistant" },
         ]);
+        setStreamingMessage("");
         setLoading(false);
       });
     } catch (error) {
@@ -49,8 +51,13 @@ export default function Chatbot() {
     if (chatContainerRef.current) {
       chatContainerRef.current.scrollTop =
         chatContainerRef.current.scrollHeight;
+      chatContainerRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest",
+      });
     }
-  }, [messages, loading]);
+  }, [messages, streamingMessage, loading]);
 
   if (!isOpen) {
     return (
@@ -66,7 +73,7 @@ export default function Chatbot() {
 
   return (
     <motion.div
-      className="fixed bottom-0 right-0 p-4 w-[90%] md:w-[40%] lg:w-[500px] lg:h-[500px] bg-slate-800 ring-2 ring-blue-400 rounded-lg m-4"
+      className="fixed bottom-0 right-0 p-4 w-[90%] md:w-[40%] lg:w-[600px] lg:h-[500px] bg-slate-800 ring-2 ring-blue-400 rounded-lg m-4"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
     >
@@ -111,14 +118,23 @@ export default function Chatbot() {
           {messages.map((msg, index) => (
             <p
               key={index}
-              className={`rounded p-2 ${
+              className={`rounded p-2 break-all ${
                 msg.sender === "user" ? "bg-slate-950" : "bg-slate-700"
               }`}
             >
               {msg.text}
             </p>
           ))}
-          {loading && <div className="text-white">Zenith is typing...</div>}
+
+          {streamingMessage && (
+            <p className="rounded p-2 break-all bg-slate-700">
+              {streamingMessage}
+              <span className="animate-pulse">|</span>
+            </p>
+          )}
+          {loading && !streamingMessage && (
+            <div className="text-white">Zenith is typing...</div>
+          )}
           {error && <div className="text-red-500">{error}</div>}
         </div>
       </div>

@@ -39,4 +39,5 @@ export type MistralChatResponse = {
   response: string;
   status: string;
   code: number;
+  role: string;
 };

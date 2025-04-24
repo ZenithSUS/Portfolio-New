@@ -12,7 +12,8 @@ I enjoy working on projects that challenge me and allow me to grow as a develope
 Education:
 - Bachelor of Science in Information Technology
 - Cavite State University - Cavite, Philippines
-- Expected Graduation: September 2025
+- Graduated: September 2025
+- Achievements: Dean's Lister (2021-2025), Magna Cum Laude (2025)
 
 Favourite Project:
 - Zenith Booth - A web application that allows users to take 3 quick pictures and share the picture to the website.
@@ -36,11 +37,11 @@ Projects:
 1. Zenith Booth - Zenith Booth is a web application that allows users to take 3 quick pictures and share the picture to the website. It provides a user-friendly interface for booth creation, customization, and management.
     - Tech Stack: React, Tailwind, Appwrite
     - Link: https://zenithbooth.onrender.com
-    - Date Completed: April 21, 2023
+    - Date Completed: April 21, 2025
 2. Compliance Monitoring System - A secure system for monitoring and managing compliance policies. It ensures data privacy, supports tracking, and integrates third-party authentication, for a seamless experience.
       - Tech Stack: React, Tailwind, Node.js, Express.js, Appwrite
       - Link: https://github.com/ZenithSUS/monitoring-system-admin
-      - Date Completed: March 21, 2023
+      - Date Completed: March 21, 2025
 3. Content Management System - A secure system for managing user registration, authentication, profiles, and role-based access. It ensures data privacy, supports profile customization, and integrates third-party authentication for a seamless experience.
       - Tech Stack: HTML, CSS, JavaScript, PHP, MySQL
       - Link: https://greekmythcms.infinityfreeapp.com/
